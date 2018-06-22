@@ -7,7 +7,7 @@ peptides = file(params.peptides)
 spectra = file(params.spectra)
 
 process indexPeptides {
-    container 'robsyme/crux'
+    container 'lifebitai/crux'
     
     input:
     file 'small-yeast.fasta' from peptides
@@ -25,7 +25,7 @@ process indexPeptides {
 }
 
 process postProcess {
-    container 'robsyme/crux'
+    container 'lifebitai/crux'
 
     input:
     file 'search.target.txt' from searchResults        
